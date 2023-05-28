@@ -26,6 +26,7 @@
 }
 
 body{
+    height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: var(--bg-url) no-repeat top center /cover;
     color: var(--text-color);
@@ -128,3 +129,11 @@ ul li a:hover{
 }
 
 
+@media(min-width: 700px){
+    :root{
+        --bg-url: url(../assets/bg-desktop.jpg);
+    }
+    .light{
+        --bg-url: url(../assets/bg-desktop-light.jpg);
+    }
+}
