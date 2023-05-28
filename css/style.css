@@ -67,11 +67,15 @@ body{
     z-index: 1;
     transform: translateY(-50%);
     cursor: pointer;
+    animation: slide-out .3s;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in .3s forwards;
 }
 
 #switch span{
@@ -111,6 +115,8 @@ ul li a{
 ul li a:hover{
     border: 1.5px solid var(--strok-color);
     background: var(--surface-color-hover);
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 .icone{
@@ -137,3 +143,23 @@ ul li a:hover{
         --bg-url: url(../assets/bg-desktop-light.jpg);
     }
 }
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+
+@keyframes slide-out{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+
